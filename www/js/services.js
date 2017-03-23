@@ -78,3 +78,27 @@ angular.module('starter.services', [])
       deleteTodo: deleteTodo
     }
   })
+
+
+  .service('UsersService', function ($http, Backand) {
+    var baseUrl = '/1/objects/';
+    var objectName = 'users/';
+
+    function getUrl() {
+      return Backand.getApiUrl() + baseUrl + objectName;
+    }
+
+    function getUrlForId(id) {
+      return getUrl() + id;
+    }
+
+    getUsers = function () {
+      return $http.get(getUrl());
+    };
+
+
+
+    return {
+      getUsers: getUsers
+    }
+  })

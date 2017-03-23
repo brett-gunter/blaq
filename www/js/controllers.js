@@ -33,7 +33,20 @@ angular.module('starter.controllers', [])
 
 .controller('SocialCtrl', function($scope) {})
 
-.controller('leaderboardCtrl', function($scope) {})
+.controller('leaderboardCtrl', function($scope, UsersService) {
+  $scope.users = [];
+  $scope.input = {};
+
+  function getAllUsers() {
+    UsersService.getUsers()
+      .then(function (result) {
+        $scope.users = result.data.data;
+      });
+  }
+
+  getAllUsers();
+
+})
 
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called

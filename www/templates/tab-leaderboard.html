@@ -1,8 +1,11 @@
 <ion-view view-title="Leaderboard">
   <ion-content>
     <ion-list>
-      Look whos winning
-      </ion-toggle>
+      <ion-item ng-repeat="item in users | orderBy:'first_name'">
+        {{item.first_name}}
+        {{item.points}}
+        </ion-option-button>
+      </ion-item>
     </ion-list>
   </ion-content>
 </ion-view>
