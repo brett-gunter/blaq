@@ -31,7 +31,27 @@ angular.module('starter.controllers', [])
   getAllTodos();
 })
 
-.controller('RewardsCtrl', function($scope) {})
+.controller('RewardsCtrl', function($scope, RewardsService, UsersService) {
+  $scope.rewards = [];
+  $scope.users = []
+  $scope.input = {};
+
+  function getAllRewards() {
+    RewardsService.getRewards()
+      .then(function (result) {
+        $scope.rewards = result.data.data;
+      });
+  }
+  function getAllUsers() {
+    UsersService.getUsers()
+      .then(function (result) {
+        $scope.users = result.data.data;
+      });
+  }
+
+  getAllUsers();
+  getAllRewards();
+})
 
 .controller('leaderboardCtrl', function($scope, UsersService) {
   $scope.users = [];
@@ -48,19 +68,21 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('Blaq_listCtrl', function($scope, Chats) {
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
+.controller('Blaq_listCtrl', function($scope, BLAQService) {
+  $scope.blaq = [];
+  $scope.input = {};
 
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
-  };
+  function getAllBLAQ() {
+    BLAQService.getBLAQ()
+      .then(function (result) {
+        $scope.blaq = result.data.data;
+      });
+  }
+
+
+
+
+  getAllBLAQ();
 })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {

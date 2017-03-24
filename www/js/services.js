@@ -102,3 +102,50 @@ angular.module('starter.services', [])
       getUsers: getUsers
     }
   })
+
+  .service('BLAQService', function ($http, Backand) {
+    var baseUrl = '/1/objects/';
+    var objectName = 'BLAQ/';
+
+    function getUrl() {
+      return Backand.getApiUrl() + baseUrl + objectName;
+    }
+
+    function getUrlForId(id) {
+      return getUrl() + id;
+    }
+
+    getBLAQ = function () {
+      return $http.get(getUrl());
+    };
+
+
+    return {
+      getBLAQ: getBLAQ,
+
+    }
+  })
+
+
+  .service('RewardsService', function ($http, Backand) {
+    var baseUrl = '/1/objects/';
+    var objectName = 'rewards/';
+
+    function getUrl() {
+      return Backand.getApiUrl() + baseUrl + objectName;
+    }
+
+    function getUrlForId(id) {
+      return getUrl() + id;
+    }
+
+    getRewards = function () {
+      return $http.get(getUrl());
+    };
+
+
+    return {
+      getRewards: getRewards,
+
+    }
+  })

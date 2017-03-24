@@ -1,29 +1,53 @@
 <ion-view view-title="Profile">
 
-
-
-
-  <ion-header-bar class="bar-positive">
-    <h1 class="title">BLAQ</h1>
-  </ion-header-bar>
-
-  <ion-content class="has-header">
-    <div class="item-input-inset">
-      <label class="item-input-wrapper">
-        <input type="text" placeholder="New Todo" ng-model="input.name">
-      </label>
-      <button class="button button-balanced button-small" ng-click="addTodo()">
-        Add Todo
-      </button>
+  <div class="list card">
+    <div class="item item-text-wrap" id="text">
+      <h1 class="padding-top">Zuker</h1>
+      <p>Zach Luker</p>
     </div>
-    <ion-list can-swipe="true">
-      <ion-item ng-repeat="item in todos">
-        {{item.name}}
-        <ion-option-button class="button-assertive" ng-click="deleteTodo(item.id)">
-          Delete
-        </ion-option-button>
-      </ion-item>
-    </ion-list>
-  </ion-content>
+    <div class="item item-body" id="profile_pic">
+      <img src="https://pbs.twimg.com/profile_images/603515291767824385/aeSkkjuR.jpg">
+    </div>
+    <p class="text2" id="text2">
+      Friends: 345
+    </p>
+    <p class="text2">
+      email: zluker13@yourmom.com
+    </p>
+    <p class="text2">
+      BLAQ List items completed:
+    </p>
+    <div class="row">
+      <div class="col col-33">
+        <img src="https://pbs.twimg.com/profile_images/603515291767824385/aeSkkjuR.jpg" id="blaq_pic">
+      </div>
+      <div class="col col-67" id="blaq_text">Wilderness Survival with Bear Grylls</div>
+    </div>
+
+  </div>
+
+
+  <!--<ion-header-bar class="bar-positive">-->
+    <!--<h1 class="title">BLAQ</h1>-->
+  <!--</ion-header-bar>-->
+
+  <!--<ion-content class="has-header">-->
+    <!--<div class="item-input-inset">-->
+      <!--<label class="item-input-wrapper">-->
+        <!--<input type="text" placeholder="New Todo" ng-model="input.name">-->
+      <!--</label>-->
+      <!--<button class="button button-balanced button-small" ng-click="addTodo()">-->
+        <!--Add Todo-->
+      <!--</button>-->
+    <!--</div>-->
+    <!--<ion-list can-swipe="true">-->
+      <!--<ion-item ng-repeat="item in todos">-->
+        <!--{{item.name}}-->
+        <!--<ion-option-button class="button-assertive" ng-click="deleteTodo(item.id)">-->
+          <!--Delete-->
+        <!--</ion-option-button>-->
+      <!--</ion-item>-->
+    <!--</ion-list>-->
+  <!--</ion-content>-->
 </ion-view>
 

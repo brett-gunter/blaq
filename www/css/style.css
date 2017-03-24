@@ -1,1 +1,24 @@
 /* Empty. Add your own CSS if you like */
+#profile_pic{
+  height: 300px;
+  width: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#text{
+  text-align: center;
+}
+.text2{
+  padding-left: 20px;
+}
+#text2{
+  padding-top: 10px;
+}
+#blaq_pic{
+  height: 100px;
+  width: 100px;
+}
+#blaq_text{
+  padding-top: 30px;
+}
