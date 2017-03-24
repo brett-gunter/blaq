@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope, TodoService) {
+.controller('ProfileCtrl', function($scope, TodoService) {
   $scope.todos = [];
   $scope.input = {};
 
@@ -31,7 +31,7 @@ angular.module('starter.controllers', [])
   getAllTodos();
 })
 
-.controller('SocialCtrl', function($scope) {})
+.controller('RewardsCtrl', function($scope) {})
 
 .controller('leaderboardCtrl', function($scope, UsersService) {
   $scope.users = [];
@@ -48,7 +48,7 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('ChatsCtrl', function($scope, Chats) {
+.controller('Blaq_listCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),
@@ -67,7 +67,7 @@ angular.module('starter.controllers', [])
   $scope.chat = Chats.get($stateParams.chatId);
 })
 
-.controller('AccountCtrl', function($scope) {
+.controller('SocialCtrl', function($scope) {
   $scope.settings = {
     enableFriends: true
   };

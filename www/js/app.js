@@ -48,22 +48,23 @@ angular.module('starter', ['ionic', 'backand', 'starter.controllers', 'starter.s
 
   // Each tab has its own nav history stack:
 
-  .state('tab.dash', {
-    url: '/dash',
+  .state('tab.profile', {
+    url: '/profile',
     views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+      'tab-profile': {
+        templateUrl: 'templates/tab-profile.html',
+        controller: 'ProfileCtrl'
       }
     }
   })
 
-    .state('tab.social', {
-      url: '/social',
+    //rewards page
+    .state('tab.rewards', {
+      url: '/rewards',
       views: {
-        'tab-social': {
-          templateUrl: 'templates/tab-social.html',
-          controller: 'SocialCtrl'
+        'tab-rewards': {
+          templateUrl: 'templates/tab-rewards.html',
+          controller: 'RewardsCtrl'
         }
       }
     })
@@ -78,36 +79,36 @@ angular.module('starter', ['ionic', 'backand', 'starter.controllers', 'starter.s
       }
     })
 
-  .state('tab.chats', {
-      url: '/chats',
+  .state('tab.blaq_list', {
+      url: '/blaq_list',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
+        'tab-blaq_list': {
+          templateUrl: 'templates/blaq_list.html',
+          controller: 'Blaq_listCtrl'
         }
       }
     })
     .state('tab.chat-detail', {
-      url: '/chats/:chatId',
+      url: '/blaq_list/:chatId',
       views: {
-        'tab-chats': {
+        'tab-blaq_list': {
           templateUrl: 'templates/chat-detail.html',
           controller: 'ChatDetailCtrl'
         }
       }
     })
 
-  .state('tab.account', {
-    url: '/account',
+  .state('tab.social', {
+    url: '/social',
     views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
+      'tab-social': {
+        templateUrl: 'templates/tab-social.html',
+        controller: 'SocialCtrl'
       }
     }
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/blaq_list');
 
 });
